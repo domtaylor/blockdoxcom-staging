@@ -5,8 +5,10 @@ backend:
 production:
   backend:
     name: bitbucket
-    repo: blockdox_uk/blockdoxcom # Change this to your repo
+    repo: marcusclements/blockdoxcom # Change this to your repo
     branch: master
+    auth_type: implicit
+    app_id: r7ZAM4TSLSLfAUkq2D
 
 media_folder: "content/uploads" # Folder where user uploaded files should go
 public_folder: "content"
