@@ -9,13 +9,13 @@ backend:
   auth_type: implicit
   app_id: r7ZAM4TSLSLfAUkq2D
 
-production:
-  backend:
-    name: bitbucket
-    repo: marcusclements/blockdoxcom # Change this to your repo
-    branch: master
-    auth_type: implicit
-    app_id: r7ZAM4TSLSLfAUkq2D
+#production:
+#  backend:
+#    name: bitbucket
+#    repo: marcusclements/blockdoxcom # Change this to your repo
+#    branch: master
+#    auth_type: implicit
+#    app_id: r7ZAM4TSLSLfAUkq2D
 
 media_folder: "content/uploads" # Folder where user uploaded files should go
 public_folder: "content"
@@ -23,7 +23,7 @@ public_folder: "content"
 collections: # A list of collections the CMS should be able to edit
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Article" # Used in the UI, ie.: "New Post"
-    folder: "content" # The path to the folder where the documents are stored
+    folder: "content/articles" # The path to the folder where the documents are stored
 #    format: markdown-python
     sort: "date:desc" # Default is title:asc
     create: true # Allow users to create new documents in this collection
