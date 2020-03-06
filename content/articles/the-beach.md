@@ -5,4 +5,4 @@ category: holidays
 ---
 This is a test article made in Netlify CMS.
 
-![night beach]( "night beach")
+![night beach](content/images/33017694648_9f62a8ca25_k.jpg "night beach")
