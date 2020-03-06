@@ -1,4 +1,9 @@
 .idea
 .python-version
 __pycache__
+pelican.pid
+srv.pid
+output
+pelicanconf_local.py
 
+.DS_Store
