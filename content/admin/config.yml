@@ -6,7 +6,7 @@ production:
   backend:
     name: bitbucket
     repo: marcusclements/blockdoxcom # Change this to your repo
-#    branch: master
+    branch: master
     auth_type: implicit
     app_id: r7ZAM4TSLSLfAUkq2D
 
