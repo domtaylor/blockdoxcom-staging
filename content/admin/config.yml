@@ -18,7 +18,9 @@ backend:
 #    app_id: r7ZAM4TSLSLfAUkq2D
 
 media_folder: "content/images" # Folder where user uploaded files should go
-public_folder: "content/images"
+public_folder: "images"
+
+logo_url: images/logo-white.png
 
 collections: # A list of collections the CMS should be able to edit
   - name: "article" # Used in routes, ie.: /admin/collections/:slug/edit
