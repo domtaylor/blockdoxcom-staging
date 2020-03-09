@@ -1,6 +1,6 @@
 ---
-title: About
-Title: About Blockdox Date: 2020-03-05 10:00
+Title: About 
+Date: 2020-03-05 10:00
 Tags: blockdox, smart buildings, smart cities, occupancy
 Category: about
 Slug: about
