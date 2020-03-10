@@ -1,6 +1,6 @@
 ---
 title: Our Team
-category: About
+category: about
 ---
 1. Dave
 2. Sheila
