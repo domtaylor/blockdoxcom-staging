@@ -19,18 +19,20 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-THEME = 'foundation-default-colours'
-# THEME = 'themes/bd-simple'
+THEME = 'bootstrap-next'
+
+# Bootstrap-next theme settings
+JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
+PLUGIN_PATHS = ['plugins']
+PLUGINS = ['i18n_subsites']
+# BOOTSTRAP_THEME = 'flatly'
 
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('Admin', 'admin'),)
+LINKS = (('Admin', 'admin'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (('LinkedIn', 'https://www.linkedin.com/company/blockdox/'),
+          ('Twitter', 'https://twitter.com/blockdoxuk'),)
 
 DEFAULT_PAGINATION = False
 
