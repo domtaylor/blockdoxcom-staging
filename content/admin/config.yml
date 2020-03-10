@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  repo: master # Change this to your repo
+  repo: master
 
 
 media_folder: "content/images" # Folder where user uploaded files should go
