@@ -1,10 +1,7 @@
 ---
-Title: About 
-Date: 2020-03-05 10:00
-Tags: blockdox, smart buildings, smart cities, occupancy
-Category: about
-Slug: about
-Summary: We make cities smarter
+title: About 
+date: 2020-03-05 10:00
+category: about
 ---
 
 Blockdox blah blah blah
