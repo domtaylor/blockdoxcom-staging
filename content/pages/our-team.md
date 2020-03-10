@@ -2,7 +2,7 @@
 title: Our Team
 category: About
 ---
-1. Nic
-2. Mark
-3. Marcus
-4. Ramona
+1. Dave
+2. Sheila
+3. Samantha
+4. Phil
