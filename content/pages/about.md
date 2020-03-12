@@ -1,9 +1,6 @@
 ---
-title: About 
-date: 2020-03-05 10:00
+title: About
+date: '2020-03-05 10:00'
 category: about
 ---
-
-Blockdox blah blah blah
-
-Edited in netlify
+We are a group of engineers and scientists dedicated to providing actionable insights for smart buildings and smart transportation.
