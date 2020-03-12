@@ -16,6 +16,8 @@ Note: content can also be edited by committing changes in Github, however it’s
 Netlify CMS is configured to use the Git Gateway which facilitates connecting the CMS to the content in Git. Git Gatway is not supported for the Bitbucket backend, so this site is managed in Github.
 
 ## Developer Getting Started
+It's a good idea to skim read the [Pelican Docs](https://docs.getpelican.com/en/stable/install.html)
+
 Setup a python virtual environment with [pyenv and virtualenv](https://blockdox.atlassian.net/wiki/spaces/DEV/pages/225443841/Use+pyenv+and+virtualenv+to+manage+virtual+environments+multiple+versions+of+python)
 ```
 pyenv virtualenv blockdoxcom
@@ -39,7 +41,7 @@ make serve
 
 ### Working on the theme
 
-To be used by pelican the theme has to be installed
+To be used by pelican the theme has to be installed see [Pelican Themes docs](http://docs.getpelican.com/en/stable/pelican-themes.html)
 ```
 pelican-themes -i \path\to\theme
 ```
