@@ -13,32 +13,21 @@ collections: # A list of collections the CMS should be able to edit
   - name: "articles" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Articles" # Used in the UI, ie.: "New Post"
     folder: "content/articles" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    fields: # The fields each document in this collection have
-      - {label: "Title", name: "title", widget: "string", tagname: "h1", class: "entry-title"}
-      - {label: "Summary", name: "body", widget: "markdown"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Category", name: "category", widget: "string", default: "about"}
-      - {label: "Status", name: "status", widget: "select", options: ["published", "hidden", "draft"], default: "published"}
-
-  - name: "posts" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Blog Posts" # Used in the UI, ie.: "New Post"
-    folder: "content/blog" # The path to the folder where the documents are stored
     sort: "date:desc" # Default is title:asc
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string", tagname: "h1", class: "entry-title"}
-      - {label: "Summary", name: "body", widget: "markdown"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Status", name: "status", widget: "select", options: ["published", "hidden", "draft"], default: "published"}
+      - {label: "Category", name: "category", widget: "string", default: "General"}
 
   - name: "pages"
     label: "Pages"
     folder: "content/pages" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
+    files:
     fields:
       - {label: "Page Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Summary", name: "body", widget: "markdown"}
-      - {label: "Status", name: "status", widget: "select", options: ["published", "hidden", "draft"], default: "published"}
+      - {label: "Category", name: "category", widget: "string", default: "General"}
+
