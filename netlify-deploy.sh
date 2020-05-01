@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pelican-themes --install themes/bootstrap-next
+pelican-themes --install themes/pelican-bootstrap3
 make clean
 make html
 

@@ -22,11 +22,12 @@ AUTHOR_FEED_RSS = None
 # THEME = 'bootstrap-next'
 THEME = 'pelican-bootstrap3'
 
-# Bootstrap-next theme settings
+# Bootstrap theme settings
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 PLUGIN_PATHS = ['plugins']
 PLUGINS = ['i18n_subsites']
-BOOTSTRAP_THEME = 'superhero'  # flatly
+# Set this to change bootswatch (http://bootswatch.com/)
+BOOTSTRAP_THEME = 'superhero'
 
 # Blogroll
 LINKS = (('Admin', 'admin'),)
