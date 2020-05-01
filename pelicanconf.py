@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = 'Blockdox'
-SITENAME = 'Blockdox.com'
+AUTHOR = 'MxCog'
+SITENAME = 'Example'
 SITEURL = ''
 
 PATH = 'content'
@@ -19,13 +19,14 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-THEME = 'bootstrap-next'
+# THEME = 'bootstrap-next'
+THEME = 'pelican-bootstrap3'
 
 # Bootstrap-next theme settings
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 PLUGIN_PATHS = ['plugins']
 PLUGINS = ['i18n_subsites']
-# BOOTSTRAP_THEME = 'flatly'
+BOOTSTRAP_THEME = 'superhero'  # flatly
 
 # Blogroll
 LINKS = (('Admin', 'admin'),)
