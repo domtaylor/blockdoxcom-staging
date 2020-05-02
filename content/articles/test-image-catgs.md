@@ -5,4 +5,4 @@ category: Blog
 ---
 Didn't we have a lovely time by the beach?
 
-![](/images/33017694648_9f62a8ca25_k.jpg)
+![doo be doo](/images/33017694648_9f62a8ca25_k.jpg "wup wup")
