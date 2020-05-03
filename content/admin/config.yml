@@ -2,6 +2,9 @@ backend:
   name: git-gateway
   repo: master
 
+#local_backend: true
+#local_backend:
+#  url: http://localhost:8081/api/v1
 
 media_folder: "content/images" # Folder where user uploaded files should go
 public_folder: "/images"
@@ -19,7 +22,16 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - {label: "Article Title", name: "title", widget: "string", tagname: "h1", class: "entry-title"}
       - {label: "Category", name: "category", widget: "string", default: "Blog"}
-      - {label: "Image", name: "image", widget: "image", class: "article-image", required: false}
+      - label: "Image"
+        name: "image"
+        widget: object
+        class: "article-image"
+        required: false
+        fields:
+          - {name: src, label: Image, widget: image}
+          - {name: alt, label: Alt text, widget: string}
+          - {name: title, label: Title, widget: string}
+
       - {label: "Body", name: "body", widget: "markdown", class: "article-body"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
 
@@ -31,7 +43,7 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - {label: "Page Title", name: "title", widget: "string"}
       - {label: "Category", name: "category", widget: "string", required: false}
-      - {label: "Image", name: "thumbnail", widget: "image", class: "page-image"}
+      - {label: "Image", name: "image", widget: "image", class: "page-image"}
       - {label: "Body", name: "body", widget: "markdown", class: "page-body"}
 
 
