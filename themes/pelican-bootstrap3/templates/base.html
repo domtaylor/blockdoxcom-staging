@@ -129,11 +129,11 @@
             {% endif %}
             <a href="{{ SITEURL }}/" class="navbar-brand">
                 {% if SITELOGO %}<img class="img-responsive pull-left gap-right" src="{{ SITEURL }}/{{ SITELOGO }}" width="{{ SITELOGO_SIZE }}"/> {% endif %}
-                {% if not HIDE_SITENAME %}{{ SITENAME }}{% endif %}
+                {% if not HIDE_SITENAME %}<div class="sitename gap-left pull-left">{{ SITENAME }}</div>{% endif %}
             </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav pull-right">
                 {% for title, link in MENUITEMS %}
                     <li><a href="{{ link }}">{{ title }}</a></li>
                 {% endfor %}

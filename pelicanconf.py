@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = 'MxCog'
-SITENAME = 'Example'
+AUTHOR = 'BlockDox'
+SITENAME = 'Social Distancing'
 SITEURL = '/'
 
 PATH = 'content'
@@ -32,7 +32,7 @@ CUSTOM_CSS = 'static/css/custom.css'
 
 SITELOGO = 'images/logo-white.png'
 SITELOGO_SIZE = 100
-HIDE_SITENAME = True
+HIDE_SITENAME = False
 
 SHOW_ARTICLE_CATEGORY = True
 
@@ -46,7 +46,10 @@ IMAGE_PROCESS_DIR = 'processed'
 # IMAGE_PROCESS_FORCE = True
 
 # Blogroll
-LINKS = (('Admin', 'admin'),)
+LINKS = (
+    ('BlockDox.com', 'http://blockdox.com'),
+    ('Admin', 'admin')
+)
 
 # Social widget
 SOCIAL = (('LinkedIn', 'https://www.linkedin.com/company/blockdox/'),

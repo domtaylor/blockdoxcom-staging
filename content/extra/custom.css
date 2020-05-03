@@ -3,7 +3,8 @@
 }
 
 #sidebar,
-.navbar-nav {
+.navbar-nav,
+.sitename {
     margin-top: 40px;
 }
 
