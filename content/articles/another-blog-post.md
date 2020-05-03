@@ -1,6 +1,7 @@
 ---
 title: The science behind Social Distancing
 category: Blog
+img_src: /images/social-distance.jpeg
 date: 2020-03-10T14:03:36.134Z
 ---
 Mauris elementum urna at eros condimentum, in tempor mauris volutpat. Nulla eget nisl ipsum. Maecenas quis nisl ipsum. Sed finibus est ac lorem fermentum, in dapibus mi pharetra. Cras efficitur est quam, id imperdiet odio mattis condimentum. Pellentesque vitae massa feugiat, posuere ex ultrices, feugiat nibh. Nulla faucibus rutrum odio, vel dictum libero. Sed efficitur sem eu dolor semper finibus. Aenean ornare condimentum euismod. Sed vel porta ipsum. Aenean dictum purus sed nulla vulputate, at sollicitudin erat ultricies. Aliquam vel dignissim justo, consequat tempus ipsum. Nulla consectetur sodales nibh, non porta orci dapibus et. Donec luctus lorem non diam scelerisque efficitur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dignissim finibus nisl, quis pretium augue egestas eu.
