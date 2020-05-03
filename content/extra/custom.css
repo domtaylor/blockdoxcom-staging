@@ -1,11 +1,18 @@
 .navbar-brand {
-    height: 80px
+    height: 80px;
+    padding: 8px 8px;
 }
 
-#sidebar,
-.navbar-nav,
-.sitename {
+#sidebar {
     margin-top: 40px;
+}
+
+.navbar-nav {
+    margin-top: 40px;
+}
+
+.sitename {
+    margin-top: 45px;
 }
 
 
@@ -36,4 +43,8 @@ h4 {
 
 .navbar {
     font-size: 18px;
+}
+
+.list-group-item {
+    padding: 10px 10px;
 }
