@@ -22,7 +22,7 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - {label: "Article Title", name: "title", widget: "string", tagname: "h1", class: "entry-title"}
       - {label: "Category", name: "category", widget: "string", default: "Blog"}
-      - {label: "Image", name: "img_src", widget: object, required: false
+      - {label: "Image", name: "img_src", widget: object, required: false}
       - {label: "Alt text", name: "img_alt", widget: string, required: false}
       - {label: "Title", name: "img_title", widget: string, required: false}
       - {label: "Body", name: "body", widget: "markdown", class: "article-body"}
