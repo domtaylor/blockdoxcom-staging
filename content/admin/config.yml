@@ -36,7 +36,9 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - {label: "Page Title", name: "title", widget: "string"}
       - {label: "Category", name: "category", widget: "string", required: false}
-      - {label: "Image", name: "image", widget: "image", class: "page-image"}
+      - {label: "Image", name: "img_src", widget: "image", required: false}
+      - {label: "Image Alt Text", name: "img_alt", widget: string, required: false}
+      - {label: "Image Title", name: "img_title", widget: string, required: false}
       - {label: "Body", name: "body", widget: "markdown", class: "page-body"}
 
 

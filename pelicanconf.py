@@ -25,9 +25,18 @@ THEME = 'pelican-bootstrap3'
 # Bootstrap theme settings
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['i18n_subsites']
+PLUGINS = ['i18n_subsites', 'image_process']
 # Set this to change bootswatch (http://bootswatch.com/)
 BOOTSTRAP_THEME = 'superhero'
+
+IMAGE_PROCESS = {
+    'article-summary-image': ["scale_in 200 200 True"],
+    'article-image': ["scale_in 500 500 True"],
+    'page-image': ["scale_in 500 500 True"]
+}
+IMAGE_PROCESS_DIR = 'processed'
+# For development always process
+# IMAGE_PROCESS_FORCE = True
 
 # Blogroll
 LINKS = (('Admin', 'admin'),)
@@ -61,6 +70,8 @@ EXTRA_PATH_METADATA = {
     # 'extra/LICENSE': {'path': 'LICENSE'},
     # 'extra/README': {'path': 'README'},
 }
+
+DISPLAY_ARTICLE_INFO_ON_INDEX = True
 
 # Import local development config
 try:

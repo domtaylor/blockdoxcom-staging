@@ -57,6 +57,11 @@
             </a>
         {% endif %}
         <div class="entry-content">
+            {% if page.img_src %}
+                <div class="article-image">
+                    <img src="{{ page.img_src }}" class="image-process-page-image" alt="{{page.img_alt}}" title="{{page.img_title}}"/>
+                </div>
+            {% endif %}
             {{ page.content }}
             {% if page.comments == 'enabled' %}
                 {% include 'includes/comments.html' %}

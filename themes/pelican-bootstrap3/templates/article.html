@@ -69,7 +69,7 @@
 
 {% block content %}
     <section id="content">
-        <article>
+        <article class="{{ '%s'|format(article.category|lower|replace(' ','-')) }}">
             <header class="page-header">
                 <h1>
                     <a href="{{ SITEURL }}/{{ article.url }}"
@@ -85,6 +85,11 @@
                         {% include "includes/article_info.html" %}
                     </div>
                 </div>
+                {% if article.img_src %}
+                <div class="article-image">
+                    <img src="{{ article.img_src }}" class="image-process-article-image" alt="{{article.img_alt}}" title="{{article.img_title}}"/>
+                </div>
+                {% endif %}
                 {{ article.content }}
             </div>
             <!-- /.entry-content -->
