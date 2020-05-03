@@ -27,7 +27,7 @@ JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 PLUGIN_PATHS = ['plugins']
 PLUGINS = ['i18n_subsites', 'image_process']
 # Set this to change bootswatch (http://bootswatch.com/)
-BOOTSTRAP_THEME = 'superhero'
+BOOTSTRAP_THEME = 'flatly'
 CUSTOM_CSS = 'static/css/custom.css'
 
 SITELOGO = 'images/logo-white.png'
