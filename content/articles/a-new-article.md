@@ -7,9 +7,9 @@ image:
   title: It's the pub!!
 date: 2020-04-28T12:46:35.401Z
 ---
-**Formatting**
-Is possible
+**Formatting** Is possible
 
 And lists:
-# item 1
-# item 2
+
+1. item 1
+2. item 2
