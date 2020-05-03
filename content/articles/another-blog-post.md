@@ -1,5 +1,5 @@
 ---
-title: Another blog post
+title: The science behind Social Distancing
 category: Blog
 date: 2020-03-10T14:03:36.134Z
 ---
