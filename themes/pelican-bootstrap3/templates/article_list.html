@@ -2,22 +2,27 @@
 {% block content %}
     {% if articles %}
         {% for article in (articles_page.object_list if articles_page else articles) %}
-            <article>
+            <article class="clearfix">
                 <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
                 {% if DISPLAY_ARTICLE_INFO_ON_INDEX %}
                     <div class="well well-sm">
                         {% include "includes/article_info.html" %}
                     </div>
                 {% endif %}
-                {% if article.img_src %}
-                <div class="article-image">
-                    <img src="{{ article.img_src }}" class="image-process-article-summary-image" alt="{{article.img_alt}}" title="{{article.img_title}}"/>
-                </div>
-                {% endif %}
-                <div class="summary">{{ article.summary }}
-                    {% include 'includes/comment_count.html' %}
-                    <a class="btn btn-default btn-xs" href="{{ SITEURL }}/{{ article.url }}">{{ _('more') }} ...</a>
-                </div>
+
+<!--                <div class="container">-->
+                    {% if article.img_src %}
+                    <div class="article-image pull-right">
+                        <a href="{{ article.url }}">
+                            <img src="{{ article.img_src }}" class="image-process-article-summary-image" alt="{{article.img_alt}}" title="{{article.img_title}}"/>
+                        </a>
+                    </div>
+                    {% endif %}
+                    <div class="summary">{{ article.summary }}
+                        {% include 'includes/comment_count.html' %}
+                        <a class="btn btn-default btn-xs" href="{{ SITEURL }}/{{ article.url }}">{{ _('more') }} ...</a>
+                    </div>
+<!--                </div>-->
             </article>
             <hr/>
         {% endfor %}

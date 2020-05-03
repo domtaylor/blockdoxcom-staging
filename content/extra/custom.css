@@ -1,0 +1,38 @@
+.navbar-brand {
+    height: 80px
+}
+
+#sidebar,
+.navbar-nav {
+    margin-top: 40px;
+}
+
+
+@font-face {
+  font-family: Forza-Medium;
+  src: url(/static/fonts/Forza-Medium.otf);
+}
+
+h1, h2, h3, h4, h5, h6,
+.navbar {
+    font-family: "Forza-Medium", sans-serif;
+}
+
+h1 {
+    font-size: 28px
+}
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+.navbar {
+    font-size: 18px;
+}

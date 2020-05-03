@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'MxCog'
 SITENAME = 'Example'
-SITEURL = ''
+SITEURL = '/'
 
 PATH = 'content'
 
@@ -28,6 +28,13 @@ PLUGIN_PATHS = ['plugins']
 PLUGINS = ['i18n_subsites', 'image_process']
 # Set this to change bootswatch (http://bootswatch.com/)
 BOOTSTRAP_THEME = 'superhero'
+CUSTOM_CSS = 'static/css/custom.css'
+
+SITELOGO = 'images/logo-white.png'
+SITELOGO_SIZE = 100
+HIDE_SITENAME = True
+
+SHOW_ARTICLE_CATEGORY = True
 
 IMAGE_PROCESS = {
     'article-summary-image': ["scale_in 200 200 True"],
@@ -63,7 +70,8 @@ ARTICLE_EXCLUDES = [
 ]
 
 EXTRA_PATH_METADATA = {
-    # 'extra/custom.css': {'path': 'custom.css'},
+    'extra/custom.css': {'path': 'static/css/custom.css'},
+    'extra/Forza-Medium.otf': {'path': 'static/fonts/Forza-Medium.otf'},
     # 'extra/robots.txt': {'path': 'robots.txt'},
     'extra/favicon.ico': {'path': 'favicon.ico'},  # and this
     # 'extra/CNAME': {'path': 'CNAME'},
