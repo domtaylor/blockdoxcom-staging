@@ -19,7 +19,7 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - {label: "Article Title", name: "title", widget: "string", tagname: "h1", class: "entry-title"}
       - {label: "Category", name: "category", widget: "string", default: "Blog"}
-      - {label: "Image", name: "image", widget: "image", class: "article-image", required: "false"}
+      - {label: "Image", name: "image", widget: "image", class: "article-image", required: false}
       - {label: "Body", name: "body", widget: "markdown", class: "article-body"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
 
@@ -30,7 +30,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     fields:
       - {label: "Page Title", name: "title", widget: "string"}
-      - {label: "Category", name: "category", widget: "string", required: "false"}
+      - {label: "Category", name: "category", widget: "string", required: false}
       - {label: "Image", name: "thumbnail", widget: "image", class: "page-image"}
       - {label: "Body", name: "body", widget: "markdown", class: "page-body"}
 
