@@ -5,6 +5,9 @@ image:
   src: /images/the-flask.jpg
   alt: the pub
   title: It's the pub!!
+img_src: /images/the-flask.jpg
+img_alt: the pub
+img_title: A nice pub
 date: 2020-04-28T12:46:35.401Z
 ---
 **Formatting** Is possible
