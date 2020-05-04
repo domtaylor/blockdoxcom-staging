@@ -48,7 +48,6 @@ IMAGE_PROCESS_DIR = 'processed'
 # Blogroll
 LINKS = (
     ('BlockDox.com', 'http://blockdox.com'),
-    ('Admin', 'admin')
 )
 
 # Social widget
