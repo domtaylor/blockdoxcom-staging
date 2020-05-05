@@ -1,11 +1,22 @@
 ---
 title: The science behind Social Distancing
 category: Blog
-img_src: /images/social-distance.jpeg
+img_src: /images/2metersenoug.jpg
+img_alt: ""
+img_title: "Multiphase Turbulent Gas Cloud From a Human Sneeze. Credit: JAMA
+  (2020). DOI: 10.1001/jama.2020.4756"
 date: 2020-03-10T14:03:36.134Z
 ---
-Mauris elementum urna at eros condimentum, in tempor mauris volutpat. Nulla eget nisl ipsum. Maecenas quis nisl ipsum. Sed finibus est ac lorem fermentum, in dapibus mi pharetra. Cras efficitur est quam, id imperdiet odio mattis condimentum. Pellentesque vitae massa feugiat, posuere ex ultrices, feugiat nibh. Nulla faucibus rutrum odio, vel dictum libero. Sed efficitur sem eu dolor semper finibus. Aenean ornare condimentum euismod. Sed vel porta ipsum. Aenean dictum purus sed nulla vulputate, at sollicitudin erat ultricies. Aliquam vel dignissim justo, consequat tempus ipsum. Nulla consectetur sodales nibh, non porta orci dapibus et. Donec luctus lorem non diam scelerisque efficitur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dignissim finibus nisl, quis pretium augue egestas eu.
+The closer you are to an person infected with Covid-19, the greater the risk becomes of being infected yourself.  Thus it is important to maintain a 'safe' distance between people to lower the risk of infection spreading.  
 
-Donec libero nisl, scelerisque non dolor eu, dignissim ullamcorper sapien. Maecenas eget aliquam massa. Ut vehicula urna mauris, vitae tempus sem semper a. Phasellus egestas egestas facilisis. Sed neque lorem, venenatis et dictum et, eleifend vel diam. Cras sit amet vehicula sapien. Suspendisse elit velit, consequat quis ultrices vitae, tempus blandit lorem. Morbi molestie, dui quis faucibus consectetur, nisl nisl iaculis diam, eget vulputate velit leo sit amet sapien. Morbi sollicitudin tortor mauris, non lobortis orci convallis at.
+This safe distance is known as "Social Distancing".  By maintaining a safe distance from others, the rate of infection should slow, making the outbreak more manageable whilst a vaccine is being developed over the course of the next 12-18 months.
 
-Nulla efficitur scelerisque faucibus. Pellentesque nec euismod ante. Proin eget enim ornare, aliquet orci eu, vestibulum ex. Fusce sit amet sem ex. Cras quis tellus sagittis, semper ipsum id, fermentum mi. Morbi tristique est diam, vel consequat nisl imperdiet in. Quisque eu bibendum orci. Nam laoreet, urna ac elementum mollis, nulla felis tempor elit, vitae tincidunt sem massa vitae nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum, risus id porttitor sollicitudin, tortor velit lacinia ante, id vulputate eros quam vitae quam.
+The WHO have suggested that a minimum distance of 2m from each other, is maintained.  It is generally believed that in the event of someone coughing or sneezing, Covid-19 will not transmit from one person to another as particles will not reach much further than 2m.  
+
+However, some evidence suggests that a safe distance would actually be between four and six metres :
+
+Professor Lydia Bourouiba from the Massachusetts Institute of Technology (MIT) [used high-speed cameras to capture a cough projecting miniature specks as far as six metres](https://jamanetwork.com/journals/jama/fullarticle/2763852).
+
+She is critical of the current safety guidance: "Having this false idea of safety at one to two metres - that somehow drops will just fall to the ground at that distance - is not based on what we have quantified, measured and visualised directly."
+
+A [study undertaken within hospitals in China](https://wwwnc.cdc.gov/eid/article/26/7/20-0885_article) found traces of coronavirus in Covid-19 wards and intensive care units, and estimated that four metres is a more appropriate safe distance.
