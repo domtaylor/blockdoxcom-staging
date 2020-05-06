@@ -1,6 +1,22 @@
 ---
-title: Time-of-Flight sensors
+title: BlockDox Time-of-Flight and Indoor Air Quality sensors
 category: General
+img_src: /images/ipad.png
 date: 2020-05-02T19:06:06.235Z
 ---
-Nunc mauris enim, tincidunt sit amet mattis sit amet, venenatis in libero. Nam eu consequat lacus. Aenean venenatis consectetur nulla sed sollicitudin. In rhoncus eu massa ut auctor. Phasellus lobortis, enim at elementum iaculis, mauris orci posuere risus, bibendum sagittis nunc enim vel ipsum. Nulla malesuada tortor nec eleifend ultrices. Aliquam erat volutpat. Curabitur elit erat, suscipit nec ligula et, aliquam rhoncus purus.
+<!--StartFragment-->
+
+BlockDox proprietary and third-party sensors are used in the appropriate combination for the relevant location to gather footfall data and air quality data. These can include LIDAR (time of flight), WiFi sniffers, infrared thermal sensors, perimeter foot counters and indoor environmental air quality sensors. Our approach is for anonymous and passive counting, protecting privacy. However, we are hardware agnostic and if required we can integrate counting from other (more intrusive) methods such as CCTV. Our multi-sensor approach improves count reliability by minimising errors from data drift.
+
+Key features of the BlockDox solution include:
+
+* Anonymous & Passive sensors
+* High count accuracy (~99%)
+* Works in all light and temperature conditions and complete darkness
+* Dashboard interface
+
+**Ease of installation.**
+
+<!--EndFragment-->
+
+<!--EndFragment-->
