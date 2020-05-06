@@ -2,7 +2,7 @@
 title: BlockDox Time-of-Flight and Indoor Air Quality sensors
 category: General
 img_src: /images/ipad.png
-date: 2020-05-02T19:06:06.235Z
+date: 2020-05-06T15:03:08.443Z
 ---
 <!--StartFragment-->
 
@@ -14,9 +14,5 @@ Key features of the BlockDox solution include:
 * High count accuracy (~99%)
 * Works in all light and temperature conditions and complete darkness
 * Dashboard interface
-
-**Ease of installation.**
-
-<!--EndFragment-->
 
 <!--EndFragment-->
