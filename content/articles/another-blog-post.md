@@ -3,8 +3,7 @@ title: The science behind Social Distancing
 category: Blog
 img_src: /images/2metersenoug.jpg
 img_alt: ""
-img_title: "Multiphase Turbulent Gas Cloud From a Human Sneeze. Credit: JAMA
-  (2020). DOI: 10.1001/jama.2020.4756"
+img_title: "Multiphase Turbulent Gas Cloud From a Human Sneeze. Credit: JAMA  (2020). DOI: 10.1001/jama.2020.4756"
 date: 2020-05-05T19:37:57.975Z
 ---
 The closer you are to an person infected with Covid-19, the greater the risk becomes of being infected yourself.  Thus it is important to maintain a 'safe' distance between people to lower the risk of infection spreading.  

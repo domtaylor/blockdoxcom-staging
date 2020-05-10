@@ -83,6 +83,8 @@ EXTRA_PATH_METADATA = {
 
 DISPLAY_ARTICLE_INFO_ON_INDEX = True
 
+NETLIFY_CMS = True
+
 # Import local development config
 try:
     import pelicanconf_local
