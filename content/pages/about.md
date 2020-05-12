@@ -2,16 +2,14 @@
 title: About
 date: 2020-03-05 10:00
 category: about
-img_src: /images/dunning-kruger-0011.jpg
-img_alt: Dunning-Kruger
-img_title: Dunning-Kruger effect
+img_src: ""
+img_alt: ""
+img_title: ""
 ---
-We are a group of engineers and scientists dedicated to providing actionable insights for smart buildings and smart transportation.
+<!--StartFragment-->
 
-[Blockdox](http://blockdox.com)
+We are an award winning urban digital solutions company headquartered in London - working globally. Our talented and experienced team of engineers and data scientists are passionate about solving the biggest problems facing the built environment and transportation today.
 
-**Add some text**
+The primary challenge facing businesses today is the 
 
-Trying out the CMS
-
-> "Endeavour drives success..."
+<!--EndFragment-->
