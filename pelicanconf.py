@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'BlockDox'
-SITENAME = 'Social Distancing'
+SITENAME = 'BlockDox'
 SITEURL = '/'
 
 PATH = 'content'
@@ -19,20 +19,32 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+# Menu
+MENUITEMS = [
+    ('About', '/category/about.html'),
+    ('News & Articles', '/category/news-articles.html'),
+    ('Smart Buildings', '/category/smart-buildings.html'),
+    ('Passenger Count', '/category/passenger-count.html'),
+    ('Contact', '/pages/contact.html')
+]
+
+DISPLAY_PAGES_ON_MENU = False
+DISPLAY_CATEGORIES_ON_MENU = False
+
 # THEME = 'bootstrap-next'
-THEME = 'pelican-bootstrap3'
+THEME = 'blockdox-bootstrap3'
 
 # Bootstrap theme settings
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['i18n_subsites', 'image_process']
+PLUGINS = ['i18n_subsites', 'image_process', 'image_category_class']
 # Set this to change bootswatch (http://bootswatch.com/)
 BOOTSTRAP_THEME = 'flatly'
 CUSTOM_CSS = 'static/css/custom.css'
 
 SITELOGO = 'images/logo-white.png'
 SITELOGO_SIZE = 100
-HIDE_SITENAME = False
+HIDE_SITENAME = True
 
 SHOW_ARTICLE_CATEGORY = True
 
