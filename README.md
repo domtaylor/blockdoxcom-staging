@@ -29,7 +29,9 @@ pyenv local blockdox.com
 Install pelican and dependencies
 ```
 pip install -r requirements.txt
+pelican-themes --install themes/blockdox-bootstrap3
 ```
+
 
 Run pelican to read from the `content` directory and generate the site in the `output` directory - runs `pelican content`
 ```
@@ -43,16 +45,7 @@ make serve
 
 ### Working on the theme
 
-To be used by pelican the theme has to be installed see [Pelican Themes docs](http://docs.getpelican.com/en/stable/pelican-themes.html)
-```
-pelican-themes -i \path\to\theme
-```
-Then it can be added in `pelicanconf.yml`
-Then the content can be generated 
-```
-make html
-```
-So far I have had to remove then reinstall the theme and regenerate content to review changes but there may be a better way of editing the theme. Try:
+To run a devserver that monitors for changes and rebuilds automatically:
 ```
 make devserver
 ```
@@ -94,13 +87,12 @@ Netlify CMS files are in content/admin. The CMS is a single page React app inclu
 ├── requirements.txt
 ├── tasks.py
 └── themes                          # PELICAN THEMES
-    ├── bootstrap-next                  # THEME BASE FOR BLOCKDOX.COM 
+    ├── blockdox-bootstrap3         # THEME BASE FOR BLOCKDOX.COM 
     │   ├── ...
 
 ```
 
 ## TODO
-Themes are from [Pelican Themes](https://github.com/getpelican/pelican-themes)
 
 Plugins are from [Pelican Plugins](https://github.com/getpelican/pelican-plugins)
 
