@@ -1,9 +1,9 @@
 ---
 title: Social Distancing in the Workplace
-category: Blog
+category: Social Distancing
 img_src: /images/tl-12-.jpg
-img_alt: ""
-img_title: ""
+img_alt: social distancing newspaper headline
+img_title: social distancing
 date: 2020-05-13T08:06:50.003Z
 ---
 <!--StartFragment-->
