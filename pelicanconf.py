@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'BlockDox'
 SITENAME = 'BlockDox'
-SITEURL = '/'
+SITEURL = ''
 
 PATH = 'content'
 
@@ -22,9 +22,10 @@ AUTHOR_FEED_RSS = None
 # Menu
 MENUITEMS = [
     ('About', '/category/about.html'),
-    ('News & Articles', '/category/news-articles.html'),
     ('Smart Buildings', '/category/smart-buildings.html'),
     ('Passenger Count', '/category/passenger-count.html'),
+    ('Social Distancing', '/category/social-distancing.html'),
+    ('News & Articles', '/category/news-articles.html'),
     ('Contact', '/pages/contact.html')
 ]
 
