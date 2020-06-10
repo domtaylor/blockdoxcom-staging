@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'BlockDox'
 SITENAME = 'BlockDox'
-SITEURL = ''
+SITEURL = 'https://blockdoxcom-staging.netlify.com'
 
 PATH = 'content'
 
@@ -20,20 +20,21 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Menu
-MENUITEMS = [
-    ('About', '/category/about.html'),
-    ('Smart Buildings', '/category/smart-buildings.html'),
-    ('Passenger Count', '/category/passenger-count.html'),
-    ('Social Distancing', '/category/social-distancing.html'),
-    ('News & Articles', '/category/news-articles.html'),
-    ('Contact', '/pages/contact.html')
-]
+MENUITEMS = (
+    ('Home', SITEURL),
+    ('About', SITEURL + '/pages/standard-text.html'),
+    ('Smart Buildings', SITEURL + '/pages/smart-buildings.html'),
+    ('Passenger Count', SITEURL + '/pages/passenger-count.html'),
+    ('Articles', SITEURL + '/pages/articles.html'),
+    ('Contact', SITEURL + '/pages/contact.html'),
+)
+
 
 DISPLAY_PAGES_ON_MENU = False
 DISPLAY_CATEGORIES_ON_MENU = False
 
 # THEME = 'bootstrap-next'
-THEME = 'blockdox-bootstrap3'
+THEME = 'themes/blockdox-bootstrap3'
 
 # Bootstrap theme settings
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}

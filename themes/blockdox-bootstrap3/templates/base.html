@@ -1,252 +1,396 @@
-<!DOCTYPE html>
-{% if USE_OPEN_GRAPH is not defined %}
-    {% set USE_OPEN_GRAPH = True %}
-{% endif %}
-<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock %}"{% if USE_OPEN_GRAPH %} prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml"{% endif %}>
+<!DOCTYPE html> {% if USE_OPEN_GRAPH is not defined %} {% set USE_OPEN_GRAPH = True %} {% endif %}
+<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock %}" {% if USE_OPEN_GRAPH %}
+    prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml" {% endif %}>
+
 <head>
     <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     {% if 'liquid_tags.notebook' in PLUGINS %}
-        {% include 'includes/liquid_tags_nb_header.html' %}
+    {% include 'includes/liquid_tags_nb_header.html' %}
     {% endif %}
 
     {# Favicons are a touchy subject. For reasoning for the following code, see: http://stackoverflow.com/a/23851464/872397 #}
     {% if FAVICON %}
     <link href="{{ SITEURL }}/{{ FAVICON }}" rel="icon">
     {% endif %}
+
     {% if FAVICON_IE %}
     <!--[if IE]><link rel="shortcut icon" href="{{ SITEURL }}/{{ FAVICON_IE }}"><![endif]-->
     {% endif %}
+
     {% if TOUCHICON %}
     <link rel="apple-touch-icon" href="{{ SITEURL }}/{{ TOUCHICON }}">
     {% endif %}
-
     {% block canonical_rel %}{% endblock %}
 
     {% block meta %}
-        <meta name="author" content="{{ AUTHOR }}" />
+    <meta name="author" content="{{ AUTHOR }}" />
     {% endblock %}
 
     {# Open Graph tags #}
+
     {% if USE_OPEN_GRAPH %}
     {% block opengraph %}
+
     <!-- Open Graph tags -->
-        {% if OPEN_GRAPH_FB_APP_ID %}
-            <meta property="fb:app_id" content="{{ OPEN_GRAPH_FB_APP_ID }}"/>
-        {% endif %}
-        <meta property="og:site_name" content="{{ SITENAME }}" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:title" content="{{ SITENAME }}"/>
-        <meta property="og:url" content="{{ SITEURL }}"/>
-        <meta property="og:description" content="{{ SITENAME }}"/>
-        {% if OPEN_GRAPH_IMAGE %}
-            <meta property="og:image"
-                  content="{{ SITEURL }}/{{ OPEN_GRAPH_IMAGE }}"/>
-        {% endif %}
-    {% endblock %}
+    {% if OPEN_GRAPH_FB_APP_ID %}
+    <meta property="fb:app_id" content="{{ OPEN_GRAPH_FB_APP_ID }}" />
     {% endif %}
-
-    {# Twitter Cards tags #}
-    {% include 'includes/twitter_cards.html' %}
-
+    <meta property="og:site_name" content="{{ SITENAME }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ SITENAME }}" />
+    <meta property="og:url" content="{{ SITEURL }}" />
+    <meta property="og:description" content="{{ SITENAME }}" />
+    {% if OPEN_GRAPH_IMAGE %}
+    <meta property="og:image" content="{{ SITEURL }}/{{ OPEN_GRAPH_IMAGE }}" />
+    {% endif %} {% endblock %} {% endif %}
+    {# Twitter Cards tags #} {% include 'includes/twitter_cards.html' %}
     {# Flattr ID for the Flattr browser plug-in #}
     {% if FLATTR_ID %}
-        <meta name="flattr:id" content="{{ FLATTR_ID }}">
-    {% endif %}
+    <meta name="flattr:id" content="{{ FLATTR_ID }}"> {% endif %}
 
     <!-- Bootstrap -->
     {% if BOOTSTRAP_THEME %}
-        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/bootstrap.{{ BOOTSTRAP_THEME }}.min.css" type="text/css"/>
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/bootstrap.{{ BOOTSTRAP_THEME }}.min.css"
+        type="text/css" />
     {% else %}
-        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/bootstrap.min.css" type="text/css" />
     {% endif %}
     <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/font-awesome.min.css" rel="stylesheet">
-
-    <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygments/{{ PYGMENTS_STYLE|default('native') }}.css" rel="stylesheet">
+    <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygments/{{ PYGMENTS_STYLE|default('native') }}.css"
+        rel="stylesheet">
     {% if 'tipue_search' in PLUGINS %}
     <link href="{{ SITEURL}}/{{ THEME_STATIC_DIR }}/tipuesearch/tipuesearch.css" rel="stylesheet">
     {% endif %}
     {% if DOCUTIL_CSS %}
-        <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/html4css1.css" rel="stylesheet">
+    <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/html4css1.css" rel="stylesheet">
+    {% endif %} {% if TYPOGRIFY %}
+    <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/typogrify.css" rel="stylesheet">
     {% endif %}
-    {% if TYPOGRIFY %}
-        <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/typogrify.css" rel="stylesheet">
-    {% endif %}
-    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css" type="text/css"/>
+
+    <!-- We are not using the previous theme's custom style. Only Bootstrap 3.4.1 and custom.css needed for styling -->
+    <!-- <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css" type="text/css" /> -->
+
     {% if CUSTOM_CSS %}
-        <link href="{{ SITEURL }}/{{ CUSTOM_CSS }}" rel="stylesheet">
+    <link href="{{ SITEURL }}/{{ CUSTOM_CSS }}" rel="stylesheet">
+
+    <!-- Roboto font for the new theme -->
+    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400&display=swap"
+        rel="stylesheet">
     {% endif %}
+
     {% if SHARIFF %}
-        <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/shariff/shariff.min.css" rel="stylesheet">
+    <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/shariff/shariff.min.css" rel="stylesheet">
     {% endif %}
-
     {% if FEED_ALL_ATOM %}
-        <link href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate"
-              title="{{ SITENAME }} ATOM Feed"/>
+    <link href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate"
+        title="{{ SITENAME }} ATOM Feed" />
     {% endif %}
-
     {% if FEED_ALL_RSS %}
-        <link href="{{ SITEURL }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate"
-              title="{{ SITENAME }} RSS Feed"/>
+    <link href="{{ SITEURL }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate"
+        title="{{ SITENAME }} RSS Feed" />
     {% endif %}
-
     {%- if tag and TAG_FEED_ATOM %}
-        {%- if '%s' not in TAG_FEED_ATOM %}
-            {%- set tag_feed_atom = TAG_FEED_ATOM.format(slug=tag.slug) %}
-        {%- else %}
-            {%- set tag_feed_atom = TAG_FEED_ATOM.format(tag.slug) %}
-        {%- endif %}
-        <link href="{{ SITEURL }}/{{ tag_feed_atom }}" type="application/atom+xml" rel="alternate"
-              title="{{ SITENAME }} {{ tag }} ATOM Feed"/>
+    {%- if '%s' not in TAG_FEED_ATOM %}
+    {%- set tag_feed_atom = TAG_FEED_ATOM.format(slug=tag.slug) %}
+    {%- else %}
+    {%- set tag_feed_atom = TAG_FEED_ATOM.format(tag.slug) %}
     {%- endif %}
-    {%- if category and CATEGORY_FEED_ATOM %}
-        {%- if '%s' not in CATEGORY_FEED_ATOM %}
-            {%- set category_feed_atom = CATEGORY_FEED_ATOM.format(slug=category.slug) %}
-        {%- else %}
-            {%- set category_feed_atom = CATEGORY_FEED_ATOM.format(category.slug) %}
-        {%- endif %}
-        <link href="{{ SITEURL }}/{{ category_feed_atom }}" type="application/atom+xml" rel="alternate"
-              title="{{ SITENAME }} {{ category }} ATOM Feed"/>
+    <link href="{{ SITEURL }}/{{ tag_feed_atom }}" type="application/atom+xml" rel="alternate"
+        title="{{ SITENAME }} {{ tag }} ATOM Feed" />
+    {%- endif %} {%- if category and CATEGORY_FEED_ATOM %}
+    {%- if '%s' not in CATEGORY_FEED_ATOM %}
+    {%- set category_feed_atom = CATEGORY_FEED_ATOM.format(slug=category.slug) %}
+    {%- else %}
+    {%- set category_feed_atom = CATEGORY_FEED_ATOM.format(category.slug)%}
+    {%- endif %}
+    <link href="{{ SITEURL }}/{{ category_feed_atom }}" type="application/atom+xml" rel="alternate"
+        title="{{ SITENAME }} {{ category }} ATOM Feed" />
     {%- endif %}
     {% if NETLIFY_CMS %}
-       {% include 'includes/netlify_cms_header.html' %}
+    {% include 'includes/netlify_cms_header.html' %}
     {% endif %}
 </head>
+
 <body>
+    {% include 'includes/menu.html' %}
 
-<div class="navbar {% if BOOTSTRAP_NAVBAR_INVERSE %}navbar-inverse{% else %}navbar-default{% endif %} navbar-fixed-top" role="navigation">
-    <div class="container{% if BOOTSTRAP_FLUID %}-fluid{% endif %}">
-        <div class="navbar-header">
-            {% if MENUITEMS or (pages and DISPLAY_PAGES_ON_MENU) or (categories and DISPLAY_CATEGORIES_ON_MENU) %}
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            {% endif %}
-            <a href="{{ SITEURL }}/" class="navbar-brand">
-                {% if SITELOGO %}<img class="img-responsive pull-left gap-right" src="{{ SITEURL }}/{{ SITELOGO }}" width="{{ SITELOGO_SIZE }}"/> {% endif %}
-                {% if not HIDE_SITENAME %}<div class="sitename gap-left pull-left">{{ SITENAME }}</div>{% endif %}
-            </a>
+    <!-- Hero Section for a primary marketing message or call to action -->
+    <div class="jumbotron jumbotron-fluid  hero-bg container-spacing-lg">
+        <div class="container text-center">
+            <h1 class="text-marine-blue">We make <br /> Spaces Smarter</h1>
+            <div class="row text-center">
+                <div class="col-xs-6 col-xs-offset-3">
+                    <p class="p-26 pt-1 font-weight-normal text-marine-blue">Using <a
+                            style="color: #cf418c !important; text-decoration: none;">artificial intelligence</a>,
+                        <a style="color: #e85d10 !important; text-decoration: none;">
+                            machine learning
+                        </a> and <a style="color: #9e1019 !important; text-decoration: none;">IoT</a> for the built
+                        environment</p>
+                </div>
+            </div>
         </div>
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav pull-right">
-                {% for title, link in MENUITEMS %}
-                    <li><a href="{{ link }}">{{ title }}</a></li>
-                {% endfor %}
-                {% if not PAGES_SORT_ATTRIBUTE -%}
-                    {% set PAGES_SORT_ATTRIBUTE = 'title' %}
-                {%- endif %}
-                {% if DISPLAY_PAGES_ON_MENU %}
-                    {% for p in pages | sort(attribute=PAGES_SORT_ATTRIBUTE) %}
-                        {% if p.url %}
-                         <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">
-                             {{ p.menulabel|default(p.title) }}
-                          </a></li>
-                        {% endif %}
-                      {% endfor %}
-                {% endif %}
-                {% if DISPLAY_CATEGORIES_ON_MENU %}
-                    {% for cat, null in categories %}
-                        <li {% if cat == category %}class="active"{% endif %}>
-                            <a href="{{ SITEURL }}/{{ cat.url }}">{{ cat | capitalize }}</a>
-                        </li>
-                    {% endfor %}
-                {% endif %}
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-            {% if 'tipue_search' in PLUGINS %}
-              <li><span>
-                <form class="navbar-search" action="{{ SEARCH_URL | default('/search.html') }}">
-                  <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
-                </form></span>
-              </li>
-            {% endif %}
-            {% if ARCHIVES_SAVE_AS %}
-              <li><a href="{{ SITEURL }}/{{ ARCHIVES_URL | default('archives.html') }}"><i class="fa fa-th-list"></i><span class="icon-label">{{ _('Archives') }}</span></a></li>
-            {% endif %}
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
     </div>
-</div> <!-- /.navbar -->
+    <!-- End Hero -->
 
-<!-- Banner -->
-{% if BANNER and BANNER_ALL_PAGES %}
-    {% include 'includes/banner.html' %}
-{% elif BANNER and not BANNER_ALL_PAGES %}
-    {% block banner %}{% endblock %}
-{% endif %}
-<!-- End Banner -->
-
-<!-- Content Container -->
-{% if PADDED_SINGLE_COLUMN_STYLE %}
-    {% set content_class='col-md-8 col-md-offset-2' %}
-{% elif not HIDE_SIDEBAR or ABOUT_ME or AVATAR %}
-    {% set content_class='col-sm-9' + (' col-sm-push-3' if SIDEBAR_ON_LEFT else '') %}
-    {% set sidebar_class='col-sm-3' + (' col-sm-pull-9' if SIDEBAR_ON_LEFT else '') %}
-{% else %}
-    {% set content_class='col-lg-12' %}
-{% endif %}
-<div class="container{% if BOOTSTRAP_FLUID %}-fluid{% endif %}">
-    <div class="row">
-        <div class="{{ content_class }}">
-            {% block breadcrumbs %}{% endblock %}
-            {% block content %}{% endblock %}
+    <!-- Content Block -->
+    <!-- Section 1 -->
+    <div class="container-fluid bg-marine-blue mobile-text-center container-spacing-lg">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 col-sm-push-1" style="padding-top:8px; padding-bottom:35px">
+                    <p class="p-22 font-weight-normal text-light">An award winning urban digital solutions company
+                        headquartered in London, but working globally.</p>
+                </div>
+                <div class="col-sm-7 col-sm-push-2">
+                    <p class="p-46 font-weight-lighter text-light" style="max-width: 574px;"> We are passionate about
+                        solving the biggest problems facing the built environment and smart cities today.</p>
+                    <div class="section-1-btns">
+                        <a href="{{SITEURL}}/pages/about.html"><button
+                                class="btn blockdox-btn-lg bg-muted-blue font-weight-light text-light">More About
+                                Us</button></a>
+                        <a href="{{SITEURL}}/pages/contact.html"><button
+                                class="btn blockdox-btn-lg bg-muted-blue font-weight-light text-light">Contact
+                                Us</button></a>
+                    </div>
+                </div>
+            </div>
         </div>
-        {% if sidebar_class %}
-        <div class="{{ sidebar_class }}" id="sidebar">
-            <aside>
-                {% if ABOUT_ME or AVATAR %}
-                    {% include 'includes/aboutme.html' %}
-                {% endif %}
-                {% if not HIDE_SIDEBAR %}
-                    {% include 'includes/sidebar.html' %}
-                {% endif %}
-            </aside>
-        </div>
-        {% endif %}
     </div>
-</div>
-<!-- End Content Container -->
+    </div>
+    <!-- End Section 1-->
 
-{% include 'includes/footer.html' %}
+    <!-- Section 2 -->
+    <div class="container-fluid home-section-2-bg container-spacing-nm">
+        <div class="container">
+            <h2 class="h2-32 text-marine-blue font-weight-normal text-center">Product Applications</h2>
+            <div class="row pt-4 transparent">
+                <div class="col-md-5 col-md-push-1 col-sm-6" style="margin-bottom: 30px;">
+                    <div class="bg-light" style="padding: 40px">
+                        <img src="{{SITEURL}}/images/smart-cities.png" class="img-responsive" />
+                        <h2 class="text-marine-blue pt-1 font-weight-normal h2-32">Smart Buildings</h2>
+                        <p class="p-22 pt-1  text-dark-grey-blue">Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                            veniam, quis nostrud lorem.</p>
+                        <div class="pt-2">
+                            <a href="{{SITEURL}}/pages/smart-buildings.html"><button
+                                    class="btn blockdox-btn-lg bg-muted-blue font-weight-light text-light">Find out
+                                    more</button></a></div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-md-push-1 col-sm-6">
+                    <div class="bg-light" style="padding: 40px">
+                        <img src="{{SITEURL}}/images/passenger-count.png" class="img-responsive" />
+                        <h2 class="text-marine-blue pt-1 font-weight-normal h2-32">Passenger Count</h2>
+                        <p class="p-22 pt-1 text-dark-grey-blue">Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                            veniam, quis nostrud lorem.</p>
+                        <div class="pt-2"><a href="{{SITEURL}}/pages/passenger-count.html"><button
+                                    class="btn blockdox-btn-lg bg-muted-blue font-weight-light text-light">Find out
+                                    more</button></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Section 2 -->
 
-<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.min.js"></script>
+    <!-- Section 3 -->
+    <div class="container-fluid bg-midnight-blue mobile-text-center container-spacing-nm">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2 class="h2-32 text-light font-weight-normal">Key Benefits.</h2>
+                    <hr class="short-line" />
+                    <div class="row">
+                        <div class="col-xs-6 home-row-3-box">
+                            <h2 class="h2-32 text-light font-weight-normal">Save Energy</h2>
+                            <p class="p-18 text-light font-weight-light">40% of energy use and carbon emissions come
+                                from the way buildings are heated, lit and used.</p>
+                        </div>
+                        <div class="col-xs-6 home-row-3-box">
+                            <h2 class="h2-32 text-light font-weight-normal">Save Energy</h2>
+                            <p class="p-18 text-light font-weight-light">40% of energy use and carbon emissions come
+                                from the way buildings are heated, lit and used.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 home-row-3-box">
+                            <h2 class="h2-32 text-light font-weight-normal">Save Energy</h2>
+                            <p class="p-18 text-light font-weight-light">40% of energy use and carbon emissions come
+                                from the way buildings are heated, lit and used.</p>
+                        </div>
+                        <div class="col-xs-6 home-row-3-box">
+                            <h2 class="h2-32 text-light font-weight-normal">Save Energy</h2>
+                            <p class="p-18 text-light font-weight-light">40% of energy use and carbon emissions come
+                                from the way buildings are heated, lit and used.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 home-row-3-box">
+                            <h2 class="h2-32 text-light font-weight-normal">Save Energy</h2>
+                            <p class="p-18 text-light font-weight-light">40% of energy use and carbon emissions come
+                                from the way buildings are heated, lit and used.</p>
+                        </div>
+                        <div class="col-xs-6 home-row-3-box">
+                            <h2 class="h2-32 text-light font-weight-normal">Save Energy</h2>
+                            <p class="p-18 text-light font-weight-light">40% of energy use and carbon emissions come
+                                from the way buildings are heated, lit and used.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <img class="img-responsive" style="padding-top: 89px;"
+                        src="{{SITEURL}}/images/blockdox-devices.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Section 3 -->
 
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/bootstrap.min.js"></script>
+    <!-- Section 4 -->
+    <div class="container-fluid bg-light mobile-text-center container-spacing-nm">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7">
+                    <div style="padding-top: 10px;">
+                        <p class="text-marine-blue p-46 font-weight-light">Access a treasure trove of never before seen
+                            insight into how their properties perform minute by minute. We can show where the gaps are
+                            and help you decide what action to take. </p>
+                    </div>
+                    <hr class="short-line" />
+                    <div>
+                        <p class="text-dark-grey-blue p-26 font-weight-normal">Our powerful algorithms harness the very
+                            latest in computational power to process immense amounts of data collected from micro-sensor
+                            technology.<br><br> BlockDox is also a highly interoperable platform. In addition to our own
+                            features, our data can be shared and access with trusted partners.</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-sm-push-1">
+                    <h2 class="h2-32 text-marine-blue font-weight-normal">Who we work with</h2>
+                    <hr class="short-line" />
+                    <div class="p-22 text-dark-grey-blue">
+                        <ul class="list-unstyled">
+                            <li>Hospitals</li>
+                            <li>Museums</li>
+                            <li>Festival Organisers</li>
+                            <li>Private Members Clubs</li>
+                            <li>Libraries</li>
+                            <li>Shopping Malls</li>
+                            <li>Co-Offices</li>
+                            <li>Airports</li>
+                            <li>Hotels</li>
+                            <li>Event Venues</li>
+                            <li>Retailers</li>
+                            <li>Restaurants&nbsp;</li>
+                            <li>Smart Cities</li>
+                            <li>Stadiums</li>
+                            <li>Residential Buildings</li>
+                            <li>Transport Operators</li>
+                            <li>Private members clubs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Section 4-->
 
-<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/respond.min.js"></script>
+    <!-- Section 5 -->
+    <div class="container-fluid bg-marine-blue container-spacing-nm">
+        <h2 class="h2-32 text-light text-center font-weight-normal">As featured in</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4">
+                    <img class="center-block section-5-img img-responsive" width="121"
+                        src="{{SITEURL}}/images/bbc-news.png">
+                    <img class="center-block section-5-img img-responsive" width="121"
+                        src="{{SITEURL}}/images/bbc-news.png">
+                    <img class="center-block section-5-img img-responsive" width="121"
+                        src="{{SITEURL}}/images/bbc-news.png">
+                </div>
+                <div class="col-xs-4">
+                    <img class="center-block section-5-img img-responsive" width="121"
+                        src="{{SITEURL}}/images/bbc-news.png">
+                    <img class="center-block section-5-img img-responsive" width="121"
+                        src="{{SITEURL}}/images/bbc-news.png">
+                    <img class="center-block section-5-img img-responsive" width="121"
+                        src="{{SITEURL}}/images/bbc-news.png">
+                </div>
+                <div class="col-xs-4">
+                    <img class="center-block section-5-img img-responsive" width="121"
+                        src="{{SITEURL}}/images/bbc-news.png">
+                    <img class="center-block section-5-img img-responsive" width="121"
+                        src="{{SITEURL}}/images/bbc-news.png">
+                    <img class="center-block section-5-img img-responsive" width="121"
+                        src="{{SITEURL}}/images/bbc-news.png">
+                </div>
 
-{% if CUSTOM_JS %}
-    <script src="{{ SITEURL }}/{{ CUSTOM_JS }}"></script>
-{% endif %}
+            </div>
+        </div>
+    </div>
+    <!-- End Section 5 -->
 
-{% if BANNER %}
-    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/bodypadding.js"></script>
-{% endif %}
-{% include 'includes/sidebar/github-js.html' %}
-{% include 'includes/disqus_script.html' %}
-{% include 'includes/ga.html' %}
-{% include 'includes/piwik.html' %}
-
-{% if 'liquid_tags.notebook' in PLUGINS %}
-    {% include 'includes/liquid_tags_nb_footer.html' %}
-{% endif %}
-
-{% block scripts %}{% endblock %}
-{% if NETLIFY_CMS %}
-       {% include 'includes/netlify_cms_footer.html' %}
-    {% endif %}
-<!-- Start of HubSpot Embed Code -->
-<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/6996519.js"></script>
-<!-- End of HubSpot Embed Code -->
+    <!-- Section 6 -->
+    <div class="container-fluid bg-light container-spacing-nm">
+        <h2 class="h2-32 text-marine-blue text-center font-weight-normal">Latest Articles</h2>
+        <div class="container">
+            <div class="row pt-4">
+                <div class="col-sm-4">
+                    <img class="center-block img-responsive" width="350" src="{{SITEURL}}/images/layer-19.png">
+                    <div style="padding:21px;">
+                        <p class="p-16 text-muted-blue">Article date : 5th May 2020</p>
+                        <h2 class="p-26 text-marine-blue font-weight-normal">The science behind Social Distancing</h2>
+                        <p class="p-16 text-dark-grey-blue font-weight-normal">The science behind Social Distancing
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                            Aenean massa. </p>
+                        <a href="{{SITEURL}}/pages/post.html">
+                            <div class="pt-1"><button
+                                    class="btn blockdox-btn-sm bg-muted-blue font-weight-light text-light">Find out
+                                    more</button></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <img class="center-block img-responsive" width="350" src="{{SITEURL}}/images/layer-20.png">
+                    <div style="padding:21px;">
+                        <p class="p-16 text-muted-blue">Article date : 5th May 2020</p>
+                        <h2 class="p-26 text-marine-blue font-weight-normal">The science behind Social Distancing</h2>
+                        <p class="p-16 text-dark-grey-blue font-weight-normal">The science behind Social Distancing
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                            Aenean massa. </p>
+                        <div class="pt-1"><button
+                                class="btn blockdox-btn-sm bg-muted-blue font-weight-light text-light">Find out
+                                more</button></div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <img class="center-block img-responsive" width="350" src="{{SITEURL}}/images/layer-21.png">
+                    <div style="padding:21px;">
+                        <p class="p-16 text-muted-blue">Article date : 5th May 2020</p>
+                        <h2 class="p-26 text-marine-blue font-weight-normal">The science behind Social Distancing</h2>
+                        <p class="p-16 text-dark-grey-blue font-weight-normal">The science behind Social Distancing
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                            Aenean massa. </p>
+                        <div class="pt-1"><button
+                                class="btn blockdox-btn-sm bg-muted-blue font-weight-light text-light">Find out
+                                more</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--- End Section 6 -->
+    <!-- End Content Block -->
+    {% include 'includes/subscribe.html' %}
+    {% include 'includes/footer.html' %}
 </body>
+
 </html>
